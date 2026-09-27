@@ -1,0 +1,1683 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Someone Special 💖</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color:white;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(255,255,255,.95),
+            rgba(255,255,255,.25) 20%,
+            transparent 45%
+        ),
+
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(255,65,160,.25),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(125,80,255,.28),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #180b35,
+            #3a145c,
+            #7b1d63,
+            #35105b,
+            #101532
+        );
+
+    background-size:
+        150% 150%;
+
+    animation:
+        backgroundMove 12s ease infinite;
+}
+
+
+@keyframes backgroundMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+
+/* =====================================================
+   MAGIC GLOW
+===================================================== */
+
+.magic-glow{
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,90,190,.15),
+            transparent 65%
+        );
+
+    pointer-events:none;
+
+    z-index:0;
+
+    animation:
+        glowMove 10s ease-in-out infinite;
+}
+
+
+@keyframes glowMove{
+
+    0%,100%{
+        transform:
+            translate(-20vw,-10vh);
+    }
+
+    50%{
+        transform:
+            translate(50vw,30vh);
+    }
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:
+        50px 15px;
+
+    position:relative;
+
+    z-index:10;
+}
+
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.card{
+
+    position:relative;
+
+    width:min(95%,900px);
+
+    padding:
+        45px 25px 55px;
+
+    text-align:center;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.05)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+
+        0 40px 100px
+        rgba(0,0,0,.4),
+
+        inset 0 0 40px
+        rgba(255,255,255,.05);
+
+    overflow:hidden;
+
+    animation:
+        cardEnter 1.5s cubic-bezier(.2,1.4,.5,1);
+}
+
+
+@keyframes cardEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(80px)
+            scale(.75)
+            rotateX(20deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1)
+            rotateX(0);
+
+    }
+}
+
+
+/* =====================================================
+   SHIMMER
+===================================================== */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    animation:
+        shimmer 5s infinite;
+}
+
+
+@keyframes shimmer{
+
+    0%{
+        left:-120%;
+    }
+
+    45%,100%{
+        left:140%;
+    }
+}
+
+
+/* =====================================================
+   TOP STARS
+===================================================== */
+
+.stars-title{
+
+    font-size:28px;
+
+    letter-spacing:14px;
+
+    color:#ffd7ef;
+
+    text-shadow:
+        0 0 10px #ff8bd0,
+        0 0 25px #ff4fac;
+
+    animation:
+        starPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes starPulse{
+
+    0%,100%{
+        transform:scale(.95);
+        opacity:.7;
+    }
+
+    50%{
+        transform:scale(1.1);
+        opacity:1;
+    }
+}
+
+
+/* =====================================================
+   SMALL TITLE
+===================================================== */
+
+.small-title{
+
+    margin-top:18px;
+
+    font-family:Arial,sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:6px;
+
+    color:#ffc4e5;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   HAPPY BIRTHDAY
+===================================================== */
+
+.title{
+
+    margin-top:12px;
+
+    line-height:.9;
+
+    position:relative;
+
+    z-index:3;
+
+    animation:
+        titleReveal 1.8s
+        cubic-bezier(.17,.89,.32,1.28);
+}
+
+
+.happy{
+
+    display:block;
+
+    font-size:
+        clamp(60px,12vw,115px);
+
+    font-style:italic;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffd6ef,
+            #ff9dd4,
+            #fff,
+            #ffd6ef
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:
+        textShine 4s linear infinite;
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(255,150,220,.45)
+        );
+}
+
+
+.birthday{
+
+    display:block;
+
+    font-size:
+        clamp(65px,14vw,135px);
+
+    font-style:italic;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff6fb5,
+            #ffd36e,
+            #ff91d2,
+            #c795ff,
+            #ff6fb5
+        );
+
+    background-size:400%;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:
+        textShine 5s linear infinite;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(255,75,175,.5)
+        );
+}
+
+
+@keyframes textShine{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:400%;
+    }
+}
+
+
+@keyframes titleReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            scale(.3)
+            rotate(-8deg);
+
+    }
+
+    70%{
+
+        transform:
+            scale(1.08)
+            rotate(2deg);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.subtitle{
+
+    margin-top:20px;
+
+    font-size:
+        clamp(17px,3vw,23px);
+
+    color:#f8d9ec;
+
+    font-style:italic;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.3);
+}
+
+
+/* =====================================================
+   CAKE AREA
+===================================================== */
+
+.cake-area{
+
+    position:relative;
+
+    width:460px;
+
+    max-width:100%;
+
+    height:390px;
+
+    margin:
+        20px auto 0;
+
+    animation:
+        cakeEntrance 1.5s .6s both
+        cubic-bezier(.2,1.5,.5,1);
+}
+
+
+@keyframes cakeEntrance{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(100px)
+            scale(.5);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+}
+
+
+/* =====================================================
+   CAKE PLATE
+===================================================== */
+
+.plate{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:15px;
+
+    transform:
+        translateX(-50%);
+
+    width:430px;
+
+    max-width:95%;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            #ffffff,
+            #d8c8e8
+        );
+
+    box-shadow:
+
+        0 15px 30px
+        rgba(0,0,0,.35),
+
+        0 0 25px
+        rgba(255,180,230,.25);
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+.cake{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:45px;
+
+    transform:
+        translateX(-50%);
+
+    width:350px;
+
+    height:270px;
+}
+
+
+/* Bottom cake */
+
+.layer1{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:350px;
+
+    height:100px;
+
+    border-radius:
+        20px 20px 35px 35px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #ff83bd,
+            #df397e
+        );
+
+    box-shadow:
+
+        inset 0 -15px 0
+        rgba(130,20,70,.15),
+
+        0 15px 25px
+        rgba(0,0,0,.25);
+}
+
+
+/* Middle cake */
+
+.layer2{
+
+    position:absolute;
+
+    bottom:75px;
+
+    left:25px;
+
+    width:300px;
+
+    height:100px;
+
+    border-radius:
+        20px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #fff,
+            #ffcde5
+        );
+
+    box-shadow:
+        0 10px 20px
+        rgba(0,0,0,.18);
+}
+
+
+/* Top cake */
+
+.layer3{
+
+    position:absolute;
+
+    bottom:150px;
+
+    left:60px;
+
+    width:230px;
+
+    height:85px;
+
+    border-radius:
+        20px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #c995ff,
+            #8d4dcc
+        );
+
+    box-shadow:
+        0 10px 20px
+        rgba(0,0,0,.25);
+}
+
+
+/* =====================================================
+   CAKE CREAM
+===================================================== */
+
+.cream{
+
+    position:absolute;
+
+    bottom:225px;
+
+    left:60px;
+
+    width:230px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 5px 12px
+        rgba(0,0,0,.15);
+}
+
+
+/* =====================================================
+   CAKE DECORATIONS
+===================================================== */
+
+.sprinkle{
+
+    position:absolute;
+
+    width:15px;
+
+    height:15px;
+
+    border-radius:50%;
+
+    background:#ffd95a;
+
+    box-shadow:
+        0 0 7px
+        rgba(255,210,70,.5);
+}
+
+
+.s1{left:35px;bottom:38px;}
+.s2{left:105px;bottom:60px;}
+.s3{left:210px;bottom:35px;}
+.s4{left:290px;bottom:55px;}
+
+.s5{left:70px;bottom:110px;}
+.s6{left:180px;bottom:125px;}
+.s7{left:250px;bottom:105px;}
+
+.s8{left:90px;bottom:180px;}
+.s9{left:165px;bottom:195px;}
+.s10{left:210px;bottom:175px;}
+
+
+/* =====================================================
+   CANDLES
+===================================================== */
+
+.candles{
+
+    position:absolute;
+
+    bottom:225px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    display:flex;
+
+    gap:27px;
+
+    z-index:20;
+}
+
+
+.candle{
+
+    position:relative;
+
+    width:19px;
+
+    height:82px;
+
+    border-radius:
+        10px 10px 4px 4px;
+
+    background:
+
+        repeating-linear-gradient(
+            45deg,
+            #fff 0 9px,
+            #ff62a8 9px 18px
+        );
+
+    box-shadow:
+        0 5px 10px
+        rgba(0,0,0,.25);
+}
+
+
+/* =====================================================
+   FLAMES
+===================================================== */
+
+.flame{
+
+    position:absolute;
+
+    left:50%;
+
+    top:-38px;
+
+    width:27px;
+
+    height:38px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 70%,
+            white 0 12%,
+            #ffe76b 25%,
+            #ff9c35 58%,
+            #ff4e39 100%
+        );
+
+    filter:
+        drop-shadow(
+            0 0 12px #ffb52e
+        )
+
+        drop-shadow(
+            0 0 25px #ff7b30
+        );
+
+    animation:
+        flame 0.55s
+        infinite alternate;
+}
+
+
+@keyframes flame{
+
+    from{
+
+        transform:
+            translateX(-50%)
+            scale(.82)
+            rotate(-5deg);
+
+    }
+
+    to{
+
+        transform:
+            translateX(-50%)
+            scale(1.13)
+            rotate(5deg);
+
+    }
+}
+
+
+/* =====================================================
+   WISH CARD
+===================================================== */
+
+.wish{
+
+    position:relative;
+
+    width:min(90%,700px);
+
+    margin:
+        5px auto 0;
+
+    padding:
+        25px 25px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.09);
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(255,255,255,.03),
+
+        0 15px 35px
+        rgba(0,0,0,.15);
+
+    animation:
+        wishEnter 1.3s 1.2s both;
+}
+
+
+@keyframes wishEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+}
+
+
+.wish p{
+
+    margin:7px 0;
+
+    font-size:
+        clamp(17px,3vw,21px);
+
+    line-height:1.55;
+
+    color:#ffeaf5;
+
+    text-shadow:
+        0 2px 8px
+        rgba(0,0,0,.3);
+}
+
+
+/* =====================================================
+   FINAL MESSAGE
+===================================================== */
+
+.final{
+
+    margin-top:25px;
+
+    font-family:
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    color:#ffb7dc;
+
+    animation:
+        finalGlow 2s infinite alternate;
+}
+
+
+@keyframes finalGlow{
+
+    from{
+        opacity:.55;
+    }
+
+    to{
+        opacity:1;
+        text-shadow:
+            0 0 15px #ff62af;
+    }
+}
+
+
+/* =====================================================
+   BUBBLES
+===================================================== */
+
+.bubbles{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+}
+
+
+.bubble{
+
+    position:absolute;
+
+    bottom:-150px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,.9),
+            rgba(255,180,220,.25) 35%,
+            rgba(160,100,255,.1) 70%,
+            transparent
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    box-shadow:
+
+        inset 0 0 15px
+        rgba(255,255,255,.2),
+
+        0 0 20px
+        rgba(255,100,190,.15);
+
+    animation:
+        bubbleUp linear infinite;
+}
+
+
+@keyframes bubbleUp{
+
+    0%{
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(.5);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:.7;
+    }
+
+    50%{
+
+        transform:
+            translateY(-55vh)
+            translateX(50px)
+            scale(1);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-120vh)
+            translateX(-60px)
+            scale(1.2);
+
+        opacity:0;
+    }
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-60px;
+
+    z-index:4;
+
+    color:#ff76b7;
+
+    text-shadow:
+        0 0 12px
+        rgba(255,100,180,.8);
+
+    pointer-events:none;
+
+    animation:
+        heartFloat linear infinite;
+}
+
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity:0;
+
+    }
+
+    15%{
+        opacity:.9;
+    }
+
+    100%{
+
+        transform:
+            translateY(-120vh)
+            rotate(360deg);
+
+        opacity:0;
+
+    }
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.sparkle{
+
+    position:fixed;
+
+    z-index:6;
+
+    color:white;
+
+    pointer-events:none;
+
+    animation:
+        sparkleAnim 2s ease-in-out infinite;
+}
+
+
+@keyframes sparkleAnim{
+
+    0%,100%{
+
+        opacity:0;
+
+        transform:
+            scale(.2)
+            rotate(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+            scale(1.4)
+            rotate(180deg);
+
+    }
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-40px;
+
+    z-index:25;
+
+    width:10px;
+
+    height:18px;
+
+    pointer-events:none;
+
+    animation:
+        confettiFall linear infinite;
+}
+
+
+@keyframes confettiFall{
+
+    from{
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+    }
+
+    to{
+
+        transform:
+            translateY(115vh)
+            rotate(900deg);
+
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:600px){
+
+    .card{
+
+        padding:
+            35px 10px 45px;
+
+        border-radius:35px;
+    }
+
+    .cake-area{
+
+        transform:
+            scale(.72);
+
+        margin-top:-10px;
+
+        margin-bottom:-40px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .small-title{
+        letter-spacing:3px;
+    }
+
+    .wish{
+        padding:20px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MAGIC BACKGROUND
+===================================================== -->
+
+<div class="magic-glow"></div>
+
+<div class="bubbles" id="bubbles"></div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<div class="main">
+
+<div class="card">
+
+
+    <div class="stars-title">
+        ✦　♡　✦　♡　✦
+    </div>
+
+
+    <div class="small-title">
+        TODAY IS A LITTLE MORE SPECIAL
+    </div>
+
+
+    <!-- TITLE -->
+
+    <div class="title">
+
+        <span class="happy">
+            Happy
+        </span>
+
+        <span class="birthday">
+            Birthday!
+        </span>
+
+    </div>
+
+
+    <div class="subtitle">
+
+        ✨ To someone who deserves all the happiness in the world ✨
+
+    </div>
+
+
+    <!-- =================================================
+         CAKE
+    ================================================= -->
+
+    <div class="cake-area">
+
+
+        <!-- Candles -->
+
+        <div class="candles">
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+        </div>
+
+
+        <!-- Cake -->
+
+        <div class="cake">
+
+            <div class="cream"></div>
+
+
+            <div class="layer3">
+
+                <div class="sprinkle s8"></div>
+                <div class="sprinkle s9"></div>
+                <div class="sprinkle s10"></div>
+
+            </div>
+
+
+            <div class="layer2">
+
+                <div class="sprinkle s5"></div>
+                <div class="sprinkle s6"></div>
+                <div class="sprinkle s7"></div>
+
+            </div>
+
+
+            <div class="layer1">
+
+                <div class="sprinkle s1"></div>
+                <div class="sprinkle s2"></div>
+                <div class="sprinkle s3"></div>
+                <div class="sprinkle s4"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="plate"></div>
+
+    </div>
+
+
+    <!-- =================================================
+         MESSAGE
+    ================================================= -->
+
+    <div class="wish">
+
+        <p>
+            🌸 May your life always be filled with
+            happiness, laughter, love and beautiful memories.
+        </p>
+
+        <p>
+            ✨ May every dream you carry in your heart
+            become a beautiful reality, and may you achieve
+            everything you wish for.
+        </p>
+
+        <p>
+            💖 Keep smiling, keep shining,
+            and keep being the wonderful person you are.
+        </p>
+
+    </div>
+
+
+    <div class="final">
+
+        WITH LOTS OF WISHES & GOOD VIBES 💫
+
+    </div>
+
+
+    <div class="stars-title"
+         style="margin-top:25px">
+
+        ♡　✦　♡　✦　♡
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   BUBBLES
+===================================================== */
+
+const bubbleContainer =
+    document.getElementById("bubbles");
+
+for(let i=0;i<45;i++){
+
+    const bubble =
+        document.createElement("div");
+
+    bubble.className="bubble";
+
+    const size =
+        20 + Math.random()*100;
+
+    bubble.style.width =
+        size+"px";
+
+    bubble.style.height =
+        size+"px";
+
+    bubble.style.left =
+        Math.random()*100+"%";
+
+    bubble.style.animationDuration =
+        (7+Math.random()*10)+"s";
+
+    bubble.style.animationDelay =
+        Math.random()*10+"s";
+
+    bubbleContainer.appendChild(bubble);
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+const heartSymbols=[
+    "♥",
+    "♡",
+    "❤",
+    "💕",
+    "💗"
+];
+
+for(let i=0;i<25;i++){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="heart";
+
+    heart.innerHTML =
+        heartSymbols[
+            Math.floor(
+                Math.random()*
+                heartSymbols.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random()*100+"%";
+
+    heart.style.fontSize =
+        (14+Math.random()*28)+"px";
+
+    heart.style.animationDuration =
+        (6+Math.random()*9)+"s";
+
+    heart.style.animationDelay =
+        Math.random()*8+"s";
+
+    document.body.appendChild(heart);
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+for(let i=0;i<35;i++){
+
+    const sparkle =
+        document.createElement("div");
+
+    sparkle.className="sparkle";
+
+    sparkle.innerHTML =
+        Math.random()>.5
+        ? "✦"
+        : "✧";
+
+    sparkle.style.left =
+        Math.random()*100+"%";
+
+    sparkle.style.top =
+        Math.random()*100+"%";
+
+    sparkle.style.fontSize =
+        (8+Math.random()*18)+"px";
+
+    sparkle.style.animationDelay =
+        Math.random()*3+"s";
+
+    document.body.appendChild(sparkle);
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+const colors=[
+    "#ff66ad",
+    "#ffd45c",
+    "#a978ff",
+    "#64d8ff",
+    "#71e39d",
+    "#ffffff"
+];
+
+for(let i=0;i<100;i++){
+
+    const piece =
+        document.createElement("div");
+
+    piece.className="confetti";
+
+    piece.style.left =
+        Math.random()*100+"vw";
+
+    piece.style.background =
+        colors[
+            Math.floor(
+                Math.random()*colors.length
+            )
+        ];
+
+    piece.style.animationDuration =
+        (4+Math.random()*7)+"s";
+
+    piece.style.animationDelay =
+        Math.random()*8+"s";
+
+    piece.style.width =
+        (5+Math.random()*9)+"px";
+
+    piece.style.height =
+        (8+Math.random()*15)+"px";
+
+    document.body.appendChild(piece);
+}
+
+
+/* =====================================================
+   INITIAL SURPRISE BURST
+===================================================== */
+
+setTimeout(()=>{
+
+    for(let i=0;i<35;i++){
+
+        const sparkle =
+            document.createElement("div");
+
+        sparkle.style.position="fixed";
+
+        sparkle.style.left="50%";
+
+        sparkle.style.top="35%";
+
+        sparkle.style.zIndex="50";
+
+        sparkle.style.color=
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+        sparkle.innerHTML =
+            Math.random()>.5
+            ? "✦"
+            : "♥";
+
+        sparkle.style.fontSize =
+            (15+Math.random()*25)+"px";
+
+        sparkle.style.pointerEvents="none";
+
+        document.body.appendChild(sparkle);
+
+        const angle =
+            Math.random()*Math.PI*2;
+
+        const distance =
+            150+Math.random()*350;
+
+        sparkle.animate(
+
+            [
+                {
+                    transform:
+                        "translate(-50%,-50%) scale(0)",
+                    opacity:1
+                },
+
+                {
+                    transform:
+                        `translate(
+                            calc(-50% + ${Math.cos(angle)*distance}px),
+                            calc(-50% + ${Math.sin(angle)*distance}px)
+                        )
+                        scale(1.5)
+                        rotate(360deg)`,
+
+                    opacity:0
+                }
+            ],
+
+            {
+                duration:
+                    1200+Math.random()*900,
+
+                easing:
+                    "cubic-bezier(.1,.8,.2,1)",
+
+                fill:"forwards"
+            }
+
+        );
+
+        setTimeout(()=>{
+            sparkle.remove();
+        },2500);
+    }
+
+},1200);
+
+</script>
+
+</body>
+</html>
+```
